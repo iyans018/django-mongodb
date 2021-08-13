@@ -1,0 +1,9 @@
+from django.db import models
+from django.db.models import fields
+from rest_framework import serializers
+from .models import Todos
+
+class TodosSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Todos
+    fields = '__all__'
